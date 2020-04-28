@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+}
+
+.disappear {
+    position: relative;
+    width: 100%;
+    min-height: 30vh;
+    background-image: linear-gradient(0deg, transparent, black 75%);
+    background-color: black;
+    z-index: 1;
+    }
+
+
+section {
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    background-color: black;
+    font-size: 500%;
+    perspective: 200px;
+    text-align: justify;
+    line-height: 150%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+.text-container {
+    position: relative;
+    /* transform-origin: 50% 100%; */
+    animation: starWars 80s linear;
+}
+
+.title {
+    text-align: center;
+}
+
+@keyframes starWars {
+    0% {
+        top: 0;
+        transform: rotateX(22deg) translateZ(0);
+    }
+    100% {
+        top: -8000px;
+        transform: rotateX(25deg) translateZ(-4200px);
+    }
+}
